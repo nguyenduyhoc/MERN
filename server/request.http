@@ -1,0 +1,52 @@
+POST  http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "username":"nhu",
+    "password": "nhu"
+}
+
+###
+
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username":"nhu",
+    "password": "nhu"
+}
+
+###
+POST  http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGI4NjliYzI4NTVkODI1YWMzNmRjNjYiLCJpYXQiOjE2MjI5NzU2MjN9.SQLtS1VkyfROMoUiWlUog01rJsDzkeGoroicxdcettU
+
+{
+    "title":"MARKETING",
+    "description":"Marketing is the superman",
+    "url":"shoppe.com",
+    "status": "TO LEARN"
+}
+
+
+###
+GET  http://localhost:5000/api/posts
+// ko gửi ko cần Content-type
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGI4NjliYzI4NTVkODI1YWMzNmRjNjYiLCJpYXQiOjE2MjI3MDEwNDh9.rx_tu6y0MC-uRylUhSOxi2Wa4S1hfEXlgxQKFC-vGVk
+
+
+###
+PUT  http://localhost:5000/api/posts/60b86a16f388bb1cc854c2be
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGI4NjliYzI4NTVkODI1YWMzNmRjNjYiLCJpYXQiOjE2MjI3MDEwNDh9.rx_tu6y0MC-uRylUhSOxi2Wa4S1hfEXlgxQKFC-vGVk
+
+{
+    "title":"MARKETING",
+    "description" : "Marketing is the superman",
+    "url" : "reactjs.org",
+    "status":"TO LEARN"
+}
+
+### 
+DELETE   http://localhost:5000/api/posts/60b86a16f388bb1cc854c2be
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGI4NjliYzI4NTVkODI1YWMzNmRjNjYiLCJpYXQiOjE2MjI3MDEwNDh9.rx_tu6y0MC-uRylUhSOxi2Wa4S1hfEXlgxQKFC-vGVk
