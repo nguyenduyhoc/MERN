@@ -19,7 +19,7 @@ const connectDB = async () => {
             }
         )
 
-        // console.log('MongoDB connected')
+        console.log('MongoDB connected')
     } catch (error) {
         console.error(error.message)
         process.exit(1)
@@ -38,4 +38,4 @@ app.use('/api/posts', postRouter )
 
 
 const PORT = process.env.PORT || 5000
-app.listen(PORT, () => console.log(`server started on port ${PORT}`))
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
